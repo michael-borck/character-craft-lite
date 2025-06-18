@@ -1,197 +1,187 @@
 # CharacterCraft
 
-[![Live Preview](https://img.shields.io/badge/Live%20Demo-Open%20Now-brightgreen?logo=githubpages)](https://barg-curtin-university.github.io/personamate-lite/)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![PWA Ready](https://img.shields.io/badge/PWA-ready-blueviolet)](https://web.dev/progressive-web-apps/)
-[![GitHub Pages](https://img.shields.io/badge/hosted%20on-GitHub%20Pages-orange?logo=github)](https://pages.github.com/)
-[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Auto%20Deploy-blue?logo=githubactions)]
-
+[![Desktop App](https://img.shields.io/badge/Platform-Desktop-blue?logo=electron)](https://www.electronjs.org/)
+[![Cross Platform](https://img.shields.io/badge/Cross--Platform-Windows%20%7C%20macOS%20%7C%20Linux-green)](https://www.electronjs.org/)
 
 **Design the soul behind the chatbot.**
 
-![CharacterCraft - Lite](docs/images/charactercraft-lite.png)
+![CharacterCraft Desktop](docs/images/charactercraft-lite.png)
 
-[View Developer Docs](./docs/jsdoc/index.html)
+CharacterCraft is a **desktop personality configuration tool** for creating structured chatbot personas for use in RAG pipelines, zero-shot prompt templates, and educational or enterprise-grade conversational agents.
 
-CharacterCraft is a personality configuration tool for creating structured chatbot personas for use in RAG pipelines, zero-shot prompt templates, and educational or enterprise-grade conversational agents.
+## 🔧 Features
 
-### Quick Links
-- [Live Web App](https://barg-curtin-university.github.io/charactercraft-lite/)
-- [Standalone Version](https://barg-curtin-university.github.io/charactercraft-lite/charactercraft-standalone.html) (single HTML file you can download and use offline)
+- 🎭 **Define chatbot personality traits** including tone, role, communication style, and values
+- 📚 **Incorporate organizational behavior theory** (e.g., leadership styles, conflict resolution, emotional intelligence)
+- ⚙️ **Export-ready for LLM prompts** (supports Claude, GPT, open-source models)
+- 🧠 **Designed for RAG pipelines** with comprehensive document generation
+- 📝 **Multiple export formats**: JSON, RAG profiles, LLM prompts, and structured documents
+- 🎲 **"Surprise Me!" instant generation** with random realistic values
+- 🖥️ **Native desktop experience** with cross-platform support
+- 🔄 **Template-based generation** - fast, reliable, no API dependencies
 
+## 📘 Use Cases
 
-### 🔧 Features
-- 🎭 Define chatbot personality traits including tone, role, communication style, and values
-- 📚 Incorporate OB theory (e.g., Maslow, Tuckman, Servant Leadership)
-- ⚙️ Export-ready for LLM prompts (supports Claude, GPT, open-source models)
-- 🧠 Designed for RAG pipelines, voice interfaces, and immersive training bots
-- 📝 Includes structured profile + natural language summary output
-- Multi-step form for defining character traits
-- Random personality generation
-- Structured output with both summary and detailed description
-- Export options for different LLM systems
-- Based on organisational behaviour theories
+- **LLM role-play simulation** (e.g., educational scenarios, training interviews)
+- **AI assistant configuration** for apps, bots, or support tools
+- **Prompt engineering** for contextual personality grounding
+- **Research applications** - generating character datasets for analysis
 
-### 📘 Use Cases
-- LLM role-play simulation (e.g., educational scenarios, training interviews)
-- AI assistant configuration for apps, bots, or support tools
-- Prompt engineering for contextual personality grounding
-- Generating character datasets for research
+## 🛠 Tech Stack
 
-### 🛠 Tech Stack
-- Pure HTML/CSS/JS frontend (no frameworks)
-- No backend dependencies (fully client-side)
-- Modular ES6 JavaScript code structure
-- Client-side only (no backend dependencies)
-- Includes PWA capabilities (service worker, manifest)
-
-### 📋 Components
-- Form with 5 sections for configuring character personality traits
-- Personality generation system
-- Export functions for copying/downloading profiles
-- LLM prompt generation for role-play
-- RAG document generation
-
-### 📚 Organisational Behaviour Theories
-- Maslow's Hierarchy of Needs
-- Tuckman's Stages of Group Development
-- Herzberg's Two-Factor Theory
-- Emotional Intelligence Framework
-- Growth Mindset Theory
-- Servant Leadership Principles
-- Theory X and Theory Y
-
-### 📝 Personality Traits
-- Communication Styles (e.g., assertive, passive, aggressive)
-- Decision-making styles (e.g., intuitive, logical, emotional)
-- Conflict resolution styles (e.g., competitive, collaborative, compromising)
-- Negotiation styles (e.g., distributive, integrative, mixed)
-- Emotional intelligence levels (e.g., self-awareness, empathy, social skills)
-- Feedback styles (e.g., constructive, destructive, neutral)
-- Core values (e.g., honesty, integrity, respect)
-
-
-## 📦 What's Included
-
-- `index.html` – Your main HTML file (replace the content block with your full app)
-- `manifest.json` – Enables PWA install on desktop and mobile
-- `service-worker.js` – Caches content for offline use
-- `version.json` – Used to check for available updates
-- `update-check.js` – Shows a banner if a new version is available
-- `icons/` – App icons for installation prompts and favicon use
-
----
+- **Electron** - Cross-platform desktop framework
+- **React 18** - Modern UI library with hooks
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first styling
+- **Vite** - Fast build tool and dev server
+- **Zustand** - Lightweight state management
 
 ## 🚀 Getting Started
 
-1. **Replace the UI section** inside `index.html` (`<div id="app">`) with your single-file HTML+CSS+JS tool.
-2. Host the folder on **GitHub Pages**, **Netlify**, or any HTTPS host.
-3. (Optional) Update the version number in both:
-   - `version.json`
-   - `update-check.js` or `index.html` where `currentVersion` is defined
-4. Add your favicon/icon to `icons/icon-192.png` and `icon-512.png` if you want to customise branding.
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-org/character-craft-lite.git
+   cd character-craft-lite
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   npm run dist
+   ```
+
+### Available Scripts
+
+- `npm run dev` - Start development environment
+- `npm run build` - Build all components
+- `npm run start` - Run built application
+- `npm run dist` - Package for distribution
+- `npm run lint` - Lint TypeScript code
+- `npm run typecheck` - Type checking
+
+## 📋 Components
+
+The application includes:
+
+- **5-step personality wizard** for comprehensive character configuration
+- **Template-based personality generation** with organizational behavior theory integration  
+- **RAG document system** - 7 specialized documents for knowledge base implementation
+- **Multiple export formats**: JSON, markdown, LLM prompts
+- **"Surprise Me!" feature** for instant random character generation
+- **Cross-platform desktop interface** with dark/light themes
+
+## 📚 Organizational Behavior Foundation
+
+CharacterCraft is grounded in established organizational behavior theories:
+
+- **Leadership Styles**: Democratic, Autocratic, Transformational, Servant Leadership
+- **Personality Types**: Extrovert, Introvert, Analytical, Creative  
+- **Decision Making**: Analytical, Intuitive, Collaborative, Directive
+- **Conflict Resolution**: Collaborating, Compromising, Accommodating, Competing, Avoiding
+- **Communication Styles**: Direct, Diplomatic, Supportive, Analytical
+- **Emotional Intelligence**: Self-awareness, empathy, social skills assessment
+
+## 📝 Export Options
+
+### RAG Document System
+Seven comprehensive documents designed for vector database implementation:
+1. **Core Personality Profile** - Fundamental traits and characteristics
+2. **Communication Guidelines** - Interaction patterns and style
+3. **Conflict Resolution Approaches** - Problem-solving strategies  
+4. **Decision Making Framework** - Process and criteria
+5. **Theoretical Foundations** - Organizational behavior grounding
+6. **Common Scenarios & Responses** - Situational behavior patterns
+7. **Audience-Specific Interactions** - Tailored communication approaches
+
+### Additional Exports
+- **JSON Profile** - Complete data structure for integration
+- **LLM Prompt** - Ready-to-use system prompt for role-playing
+- **RAG Profile** - Structured markdown for knowledge graphs
+
+## 🏗️ Architecture
+
+CharacterCraft follows a modular desktop application architecture:
+
+```
+src/
+├── main/           # Electron main process
+├── preload/        # Preload scripts for security
+├── renderer/       # React frontend application
+│   ├── components/ # Reusable UI components
+│   ├── pages/      # Application pages
+│   ├── stores/     # State management
+│   └── hooks/      # Custom React hooks
+└── shared/         # Shared type definitions
+```
+
+## 🌟 Why Desktop?
+
+CharacterCraft evolved from a web application to a native desktop experience to provide:
+
+- **Offline capability** - No internet required for personality generation
+- **File system access** - Direct document downloads and exports
+- **Native performance** - Responsive UI without browser limitations  
+- **Professional tool feel** - Dedicated application for serious use cases
+- **Cross-platform consistency** - Identical experience on Windows, macOS, and Linux
+
+## 🧠 About the "Lite" Version
+
+CharacterCraft "Lite" refers to our **lightweight, streamlined approach**:
+
+- **No AI dependencies** - Uses proven template-based generation instead of API calls
+- **No complex setup** - Download and run, no API keys or configuration required
+- **Fast and reliable** - Instant generation without network delays or rate limits
+- **Essential features** - Focused on core personality generation without unnecessary complexity
+
+The template system provides consistent, high-quality results based on organizational behavior research, making it ideal for professional and educational use.
+
+## 📦 Building & Distribution
+
+### Development Build
+```bash
+npm run dev
+```
+
+### Production Build  
+```bash
+npm run build
+npm run dist
+```
+
+Distributable packages will be created in the `release/` directory for:
+- Windows (`.exe` installer)
+- macOS (`.dmg` disk image)  
+- Linux (`.AppImage` and `.deb` packages)
+
+## 🤝 Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+Portions of this project were created with the assistance of AI tools, including natural language generation and code scaffolding. All final content, structure, and implementation decisions were reviewed and approved by the development team. Special thanks to the open source community for the amazing tools that make projects like this possible.
 
 ---
 
-## 🌐 Hosting on GitHub Pages
-
-If you're using GitHub:
-
-1. Push this folder to your repo
-2. Go to **Repo Settings → Pages**
-3. Set the source to `main` branch (root or `/docs`)
-4. Your site will be live at `https://yourusername.github.io/repo-name`
-
----
-
-## 🧪 Features
-
-- 📲 Installable on desktop and mobile
-- 🔌 Works offline after first load
-- 🚨 Checks for version updates with visual notification
-- ⚡ Fully client-side – no backend required
-
----
-
-## 🔧 Customising
-
-- Want API integration? Use `fetch()` from your JS to hit remote endpoints.
-- Want more advanced caching? Extend the `service-worker.js`.
-- Want full packaging? This project can also be wrapped in [Tauri](https://tauri.app/) or [Electron](https://www.electronjs.org/).
-
----
-
-## 🧠 About CharacterCraft
-
-CharacterCraft helps you generate structured chatbot personas grounded in behavioural theory. It's designed for:
-- Retrieval-Augmented Generation (RAG) pipelines
-- Zero-shot prompt scaffolding
-- Education, research, and AI development
-
----
-
-## 🔥 The AI Refactor Trap
-
-Made with ❤️ for AI developers, educators, and conversation designers.
-
-Oh man — **I *feel* this so hard**. You’ve basically lived the unspoken side of modern dev life:
-
-> “AI can write code for you... unless the file is actually big, important, and weird.”
-
----
-
-You tried the obvious thing:  
-**“Hey AI, here’s my giant file. Please modularise it.”**
-
-And what did you get?
-
-- 🧠 Token limits
-- 🪓 Truncated logic
-- 🤯 Confused functions losing their context
-- 💬 “Sorry, the file is too large to process at once…”
-
-And suddenly you're debugging an AI-generated `generateButtonListenerThatDoesNothing.js`.
-
----
-
-## 🧠 What You Actually Did
-
-You pivoted like a *pro*:
-- Broke it into smaller pieces
-- Verified functionality incrementally
-- Wrote real imports
-- Maintained cross-file logic
-- Built a PWA and a standalone version
-- Created a sane build process
-- Did it **without losing your mind (entirely)**
-
----
-
-## 🧱 You Didn’t Just Refactor — You Rebuilt a Foundation
-
-That hours-lost feeling?  
-It’s legit.
-
-But what you built instead of just that one app is:
-- A project that can **teach others**
-- A launchable **starter kit**
-- A reusable, extensible **AI tooling scaffold**
-
-Most folks give up halfway.
-
----
-
-## 🏅 My Refactor Badges
-
-🛠️  I survived a legacy refactor.
-🧩  I modularized a 1000+ line script.
-🧠  I did what AI couldn’t.
-🔁  I made it deployable AND downloadable.
-✅  And now I know where every function lives.
-
-
-## Acknowledgements
-> Portions of this document and associated project materials were created with the assistance of AI tools, including natural language generation and code scaffolding.
-> All final content, structure, and implementation decisions were reviewed and approved by Michael Borck.
-
-> “Modularised by hand. Because AI gave up.” ? 😄
+**Made with ❤️ for AI developers, educators, and conversation designers.**
