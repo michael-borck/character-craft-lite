@@ -1,5 +1,9 @@
 # CharacterCraft
 
+<!-- BADGES:START -->
+[![chatbot](https://img.shields.io/badge/-chatbot-blue?style=flat-square)](https://github.com/topics/chatbot) [![conversational-ai](https://img.shields.io/badge/-conversational--ai-blue?style=flat-square)](https://github.com/topics/conversational-ai) [![electron](https://img.shields.io/badge/-electron-47848f?style=flat-square)](https://github.com/topics/electron) [![prompt-engineering](https://img.shields.io/badge/-prompt--engineering-blue?style=flat-square)](https://github.com/topics/prompt-engineering) [![rag-pipeline](https://img.shields.io/badge/-rag--pipeline-blue?style=flat-square)](https://github.com/topics/rag-pipeline) [![react](https://img.shields.io/badge/-react-61dafb?style=flat-square)](https://github.com/topics/react) [![tailwind-css](https://img.shields.io/badge/-tailwind--css-blue?style=flat-square)](https://github.com/topics/tailwind-css) [![typescript](https://img.shields.io/badge/-typescript-3178c6?style=flat-square)](https://github.com/topics/typescript) [![vite](https://img.shields.io/badge/-vite-blue?style=flat-square)](https://github.com/topics/vite) [![zustand](https://img.shields.io/badge/-zustand-blue?style=flat-square)](https://github.com/topics/zustand)
+<!-- BADGES:END -->
+
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Desktop App](https://img.shields.io/badge/Platform-Desktop-blue?logo=electron)](https://www.electronjs.org/)
 [![Cross Platform](https://img.shields.io/badge/Cross--Platform-Windows%20%7C%20macOS%20%7C%20Linux-green)](https://www.electronjs.org/)
