@@ -2,6 +2,10 @@
   "name": "charactercraft-desktop",
   "version": "1.0.0",
   "description": "CharacterCraft Desktop - Design the soul behind the chatbot",
+  "author": {
+    "name": "Michael Borck",
+    "email": "michael.borck@curtin.edu.au"
+  },
   "main": "dist/main/index.js",
   "scripts": {
     "dev": "concurrently \"npm run dev:main\" \"npm run dev:renderer\" \"npm run dev:electron\"",
