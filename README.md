@@ -165,7 +165,7 @@ In addition to the desktop builds, CharacterCraft can run as a **self-hosted web
 Images are published to the GitHub Container Registry on every push to `main` and on version tags:
 
 ```bash
-docker run -p 8080:80 ghcr.io/<owner>/character-craft-lite:latest
+docker run -p 8080:80 ghcr.io/michael-borck/character-craft-lite:latest
 ```
 
 Then open http://localhost:8080.
