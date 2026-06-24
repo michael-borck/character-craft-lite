@@ -3,8 +3,8 @@ import { useSettingsStore } from '../stores/settings'
 
 export const useTheme = () => {
   const { settings, updateAppearance } = useSettingsStore()
-  const { theme, fontSize, fontFamily, compactMode, highContrast } = settings.appearance
-  const { reduceMotion } = settings.accessibility
+  const { theme, fontSize, fontFamily, compactMode } = settings.appearance
+  const { highContrast, reduceMotion } = settings.accessibility
 
   useEffect(() => {
     const root = document.documentElement

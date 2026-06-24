@@ -69,3 +69,52 @@ export interface MenuItem {
   label: string
   accelerator?: string
 }
+
+// Bridge exposed by the preload script via contextBridge
+export interface ElectronAPI {
+  getAppVersion: () => Promise<string>
+  getPlatform: () => Promise<string>
+  onMenuAction: (callback: (action: string) => void) => void
+  removeAllListeners: (channel: string) => void
+}
+
+declare global {
+  interface Window {
+    electronAPI: ElectronAPI
+  }
+}
+
+// Character builder types shared between the wizard and the RAG documents modal
+export interface CharacterData {
+  organizationName: string
+  organizationType: string
+  organizationSize: string
+  industry: string
+  characterName: string
+  age: string
+  role: string
+  tenure: string
+  personalityType: string
+  leadershipStyle: string
+  decisionMaking: string
+  conflictResolution: string
+  communicationStyle: string
+  preferredChannels: string
+  feedbackApproach: string
+  teamInteraction: string
+  emotionalIntelligence: string
+  empathy: string
+  stressManagement: string
+  adaptability: string
+}
+
+export interface GeneratedPersonality {
+  description: string
+  traits: string[]
+  communicationStyle: string
+  motivations: string[]
+  workStyle: string
+  decisionMaking: string
+  values: string[]
+  challenges: string[]
+}

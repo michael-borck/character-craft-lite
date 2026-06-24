@@ -12,10 +12,11 @@
     "build:main": "tsc -p src/main",
     "build:preload": "tsc -p src/preload",
     "build:renderer": "vite build",
+    "build:web": "vite build",
     "start": "electron dist/main/index.js",
     "dist": "electron-builder",
     "lint": "eslint src --ext .ts,.tsx",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit -p src/main/tsconfig.json && tsc --noEmit -p src/preload/tsconfig.json && tsc --noEmit -p tsconfig.renderer.json"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.0",

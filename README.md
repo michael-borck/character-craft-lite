@@ -156,6 +156,33 @@ CharacterCraft "Lite" refers to our **lightweight, streamlined approach**:
 
 The template system provides consistent, high-quality results based on organizational behavior research, making it ideal for professional and educational use.
 
+## 🌐 Self-Hosted Web Version (Docker)
+
+In addition to the desktop builds, CharacterCraft can run as a **self-hosted web app**. The renderer is a fully client-side static SPA (no backend, no API keys), so it can be served by any static web server. The provided Docker image bundles nginx for a zero-config, self-contained deployment.
+
+### Run the prebuilt image
+
+Images are published to the GitHub Container Registry on every push to `main` and on version tags:
+
+```bash
+docker run -p 8080:80 ghcr.io/<owner>/character-craft-lite:latest
+```
+
+Then open http://localhost:8080.
+
+### Build and run locally
+
+```bash
+docker build -t charactercraft-web .
+docker run -p 8080:80 charactercraft-web
+```
+
+### Notes
+
+- **Static output only** — `npm run build:web` produces `dist/renderer/` (an `index.html` plus hashed JS/CSS in `assets/`). You can serve that directory with any static host (nginx, Caddy, S3/CloudFront, etc.); Docker is just the batteries-included option.
+- **SPA routing** — the bundled `docker/nginx.conf` falls back to `index.html` so client-side routes (`/settings`, `/about`) work on refresh and deep links.
+- **No native integration** — the Electron-only features (native menu, app-version readout) simply no-op in the browser; all generation and export features work unchanged.
+
 ## 📦 Building & Distribution
 
 ### Development Build

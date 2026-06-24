@@ -21,6 +21,9 @@ build/
 release/
 out/
 
+# Compiled preload output (built into dist/, never committed in src/)
+src/preload/*.js
+
 # TypeScript build info
 *.tsbuildinfo
 

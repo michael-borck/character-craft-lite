@@ -6,7 +6,7 @@ import { Icon } from '../ui/Icon'
 
 export const Header: React.FC = () => {
   const location = useLocation()
-  const { setSettingsOpen, appInfo } = useAppStore()
+  const { setSettingsOpen } = useAppStore()
   const { currentTheme, toggleTheme } = useTheme()
 
   const getPageTitle = () => {

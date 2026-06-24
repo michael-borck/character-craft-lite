@@ -1,38 +1,5 @@
 import React, { useState } from 'react'
-
-interface CharacterData {
-  organizationName: string
-  organizationType: string
-  organizationSize: string
-  industry: string
-  characterName: string
-  age: string
-  role: string
-  tenure: string
-  personalityType: string
-  leadershipStyle: string
-  decisionMaking: string
-  conflictResolution: string
-  communicationStyle: string
-  preferredChannels: string
-  feedbackApproach: string
-  teamInteraction: string
-  emotionalIntelligence: string
-  empathy: string
-  stressManagement: string
-  adaptability: string
-}
-
-interface GeneratedPersonality {
-  description: string
-  traits: string[]
-  communicationStyle: string
-  motivations: string[]
-  workStyle: string
-  decisionMaking: string
-  values: string[]
-  challenges: string[]
-}
+import type { CharacterData, GeneratedPersonality } from '@shared/types'
 
 interface RAGDocument {
   title: string

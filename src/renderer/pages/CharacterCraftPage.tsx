@@ -1,39 +1,6 @@
 import React, { useState } from 'react'
 import { RAGDocsModal } from '../components/RAGDocsModal'
-
-interface CharacterData {
-  organizationName: string
-  organizationType: string
-  organizationSize: string
-  industry: string
-  characterName: string
-  age: string
-  role: string
-  tenure: string
-  personalityType: string
-  leadershipStyle: string
-  decisionMaking: string
-  conflictResolution: string
-  communicationStyle: string
-  preferredChannels: string
-  feedbackApproach: string
-  teamInteraction: string
-  emotionalIntelligence: string
-  empathy: string
-  stressManagement: string
-  adaptability: string
-}
-
-interface GeneratedPersonality {
-  description: string
-  traits: string[]
-  communicationStyle: string
-  motivations: string[]
-  workStyle: string
-  decisionMaking: string
-  values: string[]
-  challenges: string[]
-}
+import type { CharacterData, GeneratedPersonality } from '@shared/types'
 
 export const CharacterCraftPage: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1)
@@ -165,10 +132,12 @@ export const CharacterCraftPage: React.FC = () => {
                            data.tenure?.includes('5-10') ? 'experienced' :
                            data.tenure?.includes('3-5') ? 'seasoned' : 'developing'
 
+    const ageContext = data.age ? `, aged ${data.age},` : ''
+
     return {
-      description: `${data.characterName} is a ${experienceLevel} ${data.personalityType} ${data.leadershipStyle} leader working as a ${data.role} in the ${data.industry} industry. Known for their ${data.communicationStyle} communication style and ${data.emotionalIntelligence} emotional intelligence, they bring a ${industryContext} approach to their work at ${data.organizationName}.`,
+      description: `${data.characterName}${ageContext} is a ${experienceLevel} ${data.personalityType} ${data.leadershipStyle} leader working as a ${data.role} in the ${data.industry} industry. Known for their ${data.communicationStyle} communication style and ${data.emotionalIntelligence} emotional intelligence, they bring a ${industryContext} approach to their work at ${data.organizationName}.`,
       traits,
-      communicationStyle: `${data.communicationStyle} communicator who prefers ${data.preferredChannels} interactions and uses a ${data.feedbackApproach} feedback approach`,
+      communicationStyle: `${data.communicationStyle} communicator who prefers ${data.preferredChannels} interactions, uses a ${data.feedbackApproach} feedback approach, and engages with ${data.empathy} empathy`,
       motivations,
       workStyle: `${data.teamInteraction} work style with ${data.decisionMaking} decision-making approach, excelling in ${data.organizationSize} employee organizations`,
       decisionMaking: `Uses ${data.decisionMaking} decision-making style, handles conflict through ${data.conflictResolution} approaches, and demonstrates ${data.adaptability} when facing change`,
@@ -180,7 +149,7 @@ export const CharacterCraftPage: React.FC = () => {
   }
 
 
-  const handleGenerate = async () => {
+  const handleGenerate = () => {
     setIsGenerating(true)
     try {
       // Fill any missing fields with random values
@@ -206,7 +175,7 @@ export const CharacterCraftPage: React.FC = () => {
     setCharacterData(randomData)
   }
 
-  const handleSurpriseMe = async () => {
+  const handleSurpriseMe = () => {
     setIsGenerating(true)
     try {
       // Fill all fields with random values
@@ -372,7 +341,7 @@ When responding:
                   type="text"
                   value={characterData.organizationName}
                   onChange={(e) => handleInputChange('organizationName', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                   placeholder="Enter organization name"
                 />
               </div>
@@ -383,7 +352,7 @@ When responding:
                 <select
                   value={characterData.organizationType}
                   onChange={(e) => handleInputChange('organizationType', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select type</option>
                   <option value="corporation">Corporation</option>
@@ -400,7 +369,7 @@ When responding:
                 <select
                   value={characterData.organizationSize}
                   onChange={(e) => handleInputChange('organizationSize', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select size</option>
                   <option value="1-10">1-10 employees</option>
@@ -417,7 +386,7 @@ When responding:
                 <select
                   value={characterData.industry}
                   onChange={(e) => handleInputChange('industry', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select industry</option>
                   <option value="technology">Technology</option>
@@ -447,7 +416,7 @@ When responding:
                   type="text"
                   value={characterData.characterName}
                   onChange={(e) => handleInputChange('characterName', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                   placeholder="Enter character name"
                 />
               </div>
@@ -458,7 +427,7 @@ When responding:
                 <select
                   value={characterData.age}
                   onChange={(e) => handleInputChange('age', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select age range</option>
                   <option value="22-30">22-30</option>
@@ -476,7 +445,7 @@ When responding:
                   type="text"
                   value={characterData.role}
                   onChange={(e) => handleInputChange('role', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                   placeholder="e.g., Senior Manager, Team Lead, Director"
                 />
               </div>
@@ -487,7 +456,7 @@ When responding:
                 <select
                   value={characterData.tenure}
                   onChange={(e) => handleInputChange('tenure', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select tenure</option>
                   <option value="less-than-1-year">Less than 1 year</option>
@@ -513,7 +482,7 @@ When responding:
                 <select
                   value={characterData.personalityType}
                   onChange={(e) => handleInputChange('personalityType', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select personality type</option>
                   <option value="extrovert">Extrovert</option>
@@ -529,7 +498,7 @@ When responding:
                 <select
                   value={characterData.leadershipStyle}
                   onChange={(e) => handleInputChange('leadershipStyle', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select leadership style</option>
                   <option value="democratic">Democratic</option>
@@ -545,7 +514,7 @@ When responding:
                 <select
                   value={characterData.decisionMaking}
                   onChange={(e) => handleInputChange('decisionMaking', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select decision making style</option>
                   <option value="analytical">Analytical</option>
@@ -561,7 +530,7 @@ When responding:
                 <select
                   value={characterData.conflictResolution}
                   onChange={(e) => handleInputChange('conflictResolution', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select conflict resolution style</option>
                   <option value="collaborating">Collaborating</option>
@@ -587,7 +556,7 @@ When responding:
                 <select
                   value={characterData.communicationStyle}
                   onChange={(e) => handleInputChange('communicationStyle', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select communication style</option>
                   <option value="direct">Direct</option>
@@ -603,7 +572,7 @@ When responding:
                 <select
                   value={characterData.preferredChannels}
                   onChange={(e) => handleInputChange('preferredChannels', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select preferred channels</option>
                   <option value="face-to-face">Face-to-face</option>
@@ -620,7 +589,7 @@ When responding:
                 <select
                   value={characterData.feedbackApproach}
                   onChange={(e) => handleInputChange('feedbackApproach', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select feedback approach</option>
                   <option value="frequent-informal">Frequent informal</option>
@@ -636,7 +605,7 @@ When responding:
                 <select
                   value={characterData.teamInteraction}
                   onChange={(e) => handleInputChange('teamInteraction', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select team interaction preference</option>
                   <option value="highly-collaborative">Highly collaborative</option>
@@ -661,7 +630,7 @@ When responding:
                 <select
                   value={characterData.emotionalIntelligence}
                   onChange={(e) => handleInputChange('emotionalIntelligence', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select EI level</option>
                   <option value="high">High</option>
@@ -676,7 +645,7 @@ When responding:
                 <select
                   value={characterData.empathy}
                   onChange={(e) => handleInputChange('empathy', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select empathy level</option>
                   <option value="high">High</option>
@@ -691,7 +660,7 @@ When responding:
                 <select
                   value={characterData.stressManagement}
                   onChange={(e) => handleInputChange('stressManagement', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select stress management approach</option>
                   <option value="excellent">Excellent</option>
@@ -706,7 +675,7 @@ When responding:
                 <select
                   value={characterData.adaptability}
                   onChange={(e) => handleInputChange('adaptability', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select adaptability level</option>
                   <option value="highly-adaptable">Highly adaptable</option>

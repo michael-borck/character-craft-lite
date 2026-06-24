@@ -48,7 +48,7 @@ interface SettingsStore {
 
 export const useSettingsStore = create<SettingsStore>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       settings: defaultSettings,
       
       updateSettings: (updates) => {

@@ -49,10 +49,22 @@ class ElectronApp {
     // Security: Prevent new window creation
     app.on('web-contents-created', (_, contents) => {
       contents.setWindowOpenHandler(({ url }) => {
-        shell.openExternal(url)
+        this.openExternalSafely(url)
         return { action: 'deny' }
       })
     })
+  }
+
+  // Security: Only hand http(s) URLs to the OS; reject other schemes
+  private openExternalSafely(url: string): void {
+    try {
+      const { protocol } = new URL(url)
+      if (protocol === 'https:' || protocol === 'http:') {
+        shell.openExternal(url)
+      }
+    } catch {
+      // Ignore malformed URLs
+    }
   }
 
   private createWindow(): void {
@@ -75,6 +87,7 @@ class ElectronApp {
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
+        sandbox: true,
         preload: join(__dirname, '../preload/index.js')
       },
       titleBarStyle: process.platform === 'darwin' ? 'hiddenInset' : 'default',
@@ -115,7 +128,7 @@ class ElectronApp {
     this.mainWindow.webContents.on('will-navigate', (event, url) => {
       if (url !== this.mainWindow?.webContents.getURL()) {
         event.preventDefault()
-        shell.openExternal(url)
+        this.openExternalSafely(url)
       }
     })
   }

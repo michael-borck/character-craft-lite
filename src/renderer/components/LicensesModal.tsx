@@ -6,6 +6,8 @@ interface LicensesModalProps {
 }
 
 export const LicensesModal: React.FC<LicensesModalProps> = ({ isOpen, onClose }) => {
+  const [selectedLicense, setSelectedLicense] = React.useState<number | null>(null)
+
   if (!isOpen) return null
 
   const licenses = [
@@ -228,8 +230,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`
     }
   ]
-
-  const [selectedLicense, setSelectedLicense] = React.useState<number | null>(null)
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
