@@ -1,90 +1,51 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
 import { useAppStore } from '../../stores/app'
 import { useTheme } from '../../hooks/useTheme'
 import { Icon } from '../ui/Icon'
 
 export const Header: React.FC = () => {
-  const location = useLocation()
-  const { setSettingsOpen } = useAppStore()
+  const { setSettingsOpen, setAboutOpen } = useAppStore()
   const { currentTheme, toggleTheme } = useTheme()
 
-  const getPageTitle = () => {
-    switch (location.pathname) {
-      case '/':
-        return 'Character Builder'
-      case '/settings':
-        return 'Settings'
-      case '/about':
-        return 'About'
-      default:
-        return 'CharacterCraft'
-    }
-  }
-
-  const getPageTagline = () => {
-    switch (location.pathname) {
-      case '/':
-        return 'Design the soul behind the chatbot'
-      case '/settings':
-        return 'Customize your experience'
-      case '/about':
-        return 'Learn more about CharacterCraft'
-      default:
-        return 'Build engaging personalities'
-    }
-  }
-
-  const getThemeIcon = () => {
-    switch (currentTheme) {
-      case 'dark':
-        return 'Moon'
-      case 'light':
-        return 'Sun'
-      default:
-        return 'Monitor'
-    }
-  }
+  const themeIcon = currentTheme === 'dark' ? 'Moon' : currentTheme === 'light' ? 'Sun' : 'Monitor'
 
   return (
-    <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-4">
+    <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-6 py-3">
       <div className="flex items-center justify-between">
-        {/* Page Title */}
-        <div>
-          <h1 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-            {getPageTitle()}
-          </h1>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            {getPageTagline()}
-          </p>
+        {/* Brand */}
+        <div className="flex items-baseline gap-2">
+          <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-100">CharacterCraft</h1>
+          <span className="hidden sm:inline text-sm text-gray-400 dark:text-gray-500">
+            Design the soul behind the chatbot
+          </span>
         </div>
 
         {/* Actions */}
-        <div className="flex items-center gap-3">
-          {/* Theme Toggle */}
+        <div className="flex items-center gap-1">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            title="Toggle theme"
+            className="p-2 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            title={`Theme: ${currentTheme}`}
           >
-            <Icon 
-              name={getThemeIcon() as any} 
-              size={20}
-              className="text-gray-600 dark:text-gray-400"
-            />
+            <Icon name={themeIcon as 'Sun' | 'Moon' | 'Monitor'} size={18} />
           </button>
 
-          {/* Settings */}
+          <button
+            onClick={() => setAboutOpen(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            title="About CharacterCraft"
+          >
+            <Icon name="Info" size={16} />
+            <span className="hidden sm:inline">About</span>
+          </button>
+
           <button
             onClick={() => setSettingsOpen(true)}
-            className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            title="Open settings"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            title="Settings"
           >
-            <Icon 
-              name="Settings" 
-              size={20}
-              className="text-gray-600 dark:text-gray-400"
-            />
+            <Icon name="Settings" size={16} />
+            <span className="hidden sm:inline">Settings</span>
           </button>
         </div>
       </div>

@@ -341,7 +341,7 @@ When responding:
                   type="text"
                   value={characterData.organizationName}
                   onChange={(e) => handleInputChange('organizationName', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                   placeholder="Enter organization name"
                 />
               </div>
@@ -352,7 +352,7 @@ When responding:
                 <select
                   value={characterData.organizationType}
                   onChange={(e) => handleInputChange('organizationType', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select type</option>
                   <option value="corporation">Corporation</option>
@@ -369,7 +369,7 @@ When responding:
                 <select
                   value={characterData.organizationSize}
                   onChange={(e) => handleInputChange('organizationSize', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select size</option>
                   <option value="1-10">1-10 employees</option>
@@ -386,7 +386,7 @@ When responding:
                 <select
                   value={characterData.industry}
                   onChange={(e) => handleInputChange('industry', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select industry</option>
                   <option value="technology">Technology</option>
@@ -416,7 +416,7 @@ When responding:
                   type="text"
                   value={characterData.characterName}
                   onChange={(e) => handleInputChange('characterName', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                   placeholder="Enter character name"
                 />
               </div>
@@ -427,7 +427,7 @@ When responding:
                 <select
                   value={characterData.age}
                   onChange={(e) => handleInputChange('age', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select age range</option>
                   <option value="22-30">22-30</option>
@@ -445,7 +445,7 @@ When responding:
                   type="text"
                   value={characterData.role}
                   onChange={(e) => handleInputChange('role', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                   placeholder="e.g., Senior Manager, Team Lead, Director"
                 />
               </div>
@@ -456,7 +456,7 @@ When responding:
                 <select
                   value={characterData.tenure}
                   onChange={(e) => handleInputChange('tenure', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select tenure</option>
                   <option value="less-than-1-year">Less than 1 year</option>
@@ -482,7 +482,7 @@ When responding:
                 <select
                   value={characterData.personalityType}
                   onChange={(e) => handleInputChange('personalityType', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select personality type</option>
                   <option value="extrovert">Extrovert</option>
@@ -498,7 +498,7 @@ When responding:
                 <select
                   value={characterData.leadershipStyle}
                   onChange={(e) => handleInputChange('leadershipStyle', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select leadership style</option>
                   <option value="democratic">Democratic</option>
@@ -514,7 +514,7 @@ When responding:
                 <select
                   value={characterData.decisionMaking}
                   onChange={(e) => handleInputChange('decisionMaking', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select decision making style</option>
                   <option value="analytical">Analytical</option>
@@ -530,7 +530,7 @@ When responding:
                 <select
                   value={characterData.conflictResolution}
                   onChange={(e) => handleInputChange('conflictResolution', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select conflict resolution style</option>
                   <option value="collaborating">Collaborating</option>
@@ -556,7 +556,7 @@ When responding:
                 <select
                   value={characterData.communicationStyle}
                   onChange={(e) => handleInputChange('communicationStyle', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select communication style</option>
                   <option value="direct">Direct</option>
@@ -572,7 +572,7 @@ When responding:
                 <select
                   value={characterData.preferredChannels}
                   onChange={(e) => handleInputChange('preferredChannels', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select preferred channels</option>
                   <option value="face-to-face">Face-to-face</option>
@@ -589,7 +589,7 @@ When responding:
                 <select
                   value={characterData.feedbackApproach}
                   onChange={(e) => handleInputChange('feedbackApproach', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select feedback approach</option>
                   <option value="frequent-informal">Frequent informal</option>
@@ -605,7 +605,7 @@ When responding:
                 <select
                   value={characterData.teamInteraction}
                   onChange={(e) => handleInputChange('teamInteraction', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select team interaction preference</option>
                   <option value="highly-collaborative">Highly collaborative</option>
@@ -630,7 +630,7 @@ When responding:
                 <select
                   value={characterData.emotionalIntelligence}
                   onChange={(e) => handleInputChange('emotionalIntelligence', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select EI level</option>
                   <option value="high">High</option>
@@ -645,7 +645,7 @@ When responding:
                 <select
                   value={characterData.empathy}
                   onChange={(e) => handleInputChange('empathy', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select empathy level</option>
                   <option value="high">High</option>
@@ -660,7 +660,7 @@ When responding:
                 <select
                   value={characterData.stressManagement}
                   onChange={(e) => handleInputChange('stressManagement', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select stress management approach</option>
                   <option value="excellent">Excellent</option>
@@ -675,7 +675,7 @@ When responding:
                 <select
                   value={characterData.adaptability}
                   onChange={(e) => handleInputChange('adaptability', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
                 >
                   <option value="">Select adaptability level</option>
                   <option value="highly-adaptable">Highly adaptable</option>
@@ -691,7 +691,7 @@ When responding:
               <div className="mb-6">
                 <button
                   onClick={handleRandomFill}
-                  className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors mb-2"
+                  className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors mb-2"
                 >
                   🎲 Fill Missing Fields Randomly
                 </button>
@@ -701,11 +701,11 @@ When responding:
               </div>
 
               
-              <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-                <p className="text-green-800 dark:text-green-200 font-medium mb-1">
+              <div className="bg-gray-100 dark:bg-gray-700/50 p-4 rounded-lg">
+                <p className="text-gray-800 dark:text-gray-200 font-medium mb-1">
                   🚀 Ready to Generate
                 </p>
-                <p className="text-green-700 dark:text-green-300 text-xs">
+                <p className="text-gray-600 dark:text-gray-400 text-xs">
                   Generate personality profile based on organizational behavior theories. Missing fields will be filled automatically.
                 </p>
               </div>
@@ -772,24 +772,24 @@ When responding:
                   </div>
                 </div>
                 
-                <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
+                <div className="bg-gray-100 dark:bg-gray-700/50 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Export Options</h3>
                   <div className="flex flex-wrap gap-3">
                     <button
                       onClick={handleExportJSON}
-                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                     >
                       📋 Copy/Download JSON
                     </button>
                     <button
                       onClick={handleExportRAG}
-                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                      className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                     >
                       📄 Download RAG Profile
                     </button>
                     <button
                       onClick={() => setShowRAGModal(true)}
-                      className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                      className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                     >
                       📚 RAG Documents
                     </button>
@@ -800,13 +800,13 @@ When responding:
                           .then(() => alert('LLM prompt copied to clipboard!'))
                           .catch(() => alert('Failed to copy prompt'))
                       }}
-                      className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                      className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                     >
                       🤖 Copy LLM Prompt
                     </button>
                     <button
                       onClick={handleReset}
-                      className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                      className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 transition-colors"
                     >
                       🔄 Start Over
                     </button>
@@ -829,7 +829,7 @@ When responding:
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-6">
+    <div className="min-h-full bg-gray-50 dark:bg-gray-900 p-6">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
           <div className="mb-8">
@@ -846,14 +846,14 @@ When responding:
                 <button
                   onClick={handleSurpriseMe}
                   disabled={isGenerating}
-                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 font-medium"
+                  className="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 font-medium"
                 >
                   {isGenerating ? '🎲 Generating...' : '🎲 Surprise Me!'}
                 </button>
                 <button
                   onClick={handleReset}
                   disabled={isGenerating}
-                  className="px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="px-4 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   🔄 Start Over
                 </button>
@@ -870,17 +870,17 @@ When responding:
                     key={step}
                     className={`flex items-center justify-center w-8 h-8 rounded-full ${
                       step <= currentStep
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-300 text-gray-600'
+                        ? 'bg-primary-600 text-white'
+                        : 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400'
                     }`}
                   >
                     {step}
                   </div>
                 ))}
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                 <div
-                  className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                  className="bg-primary-600 h-2 rounded-full transition-all duration-300"
                   style={{ width: `${(currentStep / 5) * 100}%` }}
                 ></div>
               </div>
@@ -896,7 +896,7 @@ When responding:
               <button
                 onClick={handlePrevious}
                 disabled={currentStep === 1}
-                className="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 Previous
               </button>
@@ -905,14 +905,14 @@ When responding:
                 <button
                   onClick={handleGenerate}
                   disabled={isGenerating}
-                  className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   {isGenerating ? 'Generating...' : 'Generate Personality'}
                 </button>
               ) : (
                 <button
                   onClick={handleNext}
-                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                 >
                   Next
                 </button>

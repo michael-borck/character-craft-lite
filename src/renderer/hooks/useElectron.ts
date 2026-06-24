@@ -56,11 +56,7 @@ export const useElectron = () => {
           useAppStore.getState().setSettingsOpen(true)
           break
         case 'menu-about':
-          addNotification({
-            type: 'info',
-            title: 'About',
-            message: 'About dialog triggered'
-          })
+          useAppStore.getState().setAboutOpen(true)
           break
         default:
           console.log('Unhandled menu action:', action)

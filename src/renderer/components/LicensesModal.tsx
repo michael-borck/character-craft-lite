@@ -263,7 +263,7 @@ SOFTWARE.`
                   onClick={() => setSelectedLicense(index)}
                   className={`w-full text-left p-3 rounded-lg transition-colors ${
                     selectedLicense === index
-                      ? 'bg-blue-100 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-600'
+                      ? 'bg-primary-100 dark:bg-primary-900/30 border border-primary-300 dark:border-primary-600'
                       : 'bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600'
                   }`}
                 >

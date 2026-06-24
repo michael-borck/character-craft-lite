@@ -7,6 +7,8 @@ interface AppStore extends AppState {
   setCurrentRoute: (route: string) => void
   setSidebarCollapsed: (collapsed: boolean) => void
   setSettingsOpen: (open: boolean) => void
+  aboutOpen: boolean
+  setAboutOpen: (open: boolean) => void
   
   // Navigation
   navigationItems: NavigationItem[]
@@ -34,6 +36,7 @@ export const useAppStore = create<AppStore>((set, get) => ({
   currentRoute: '/',
   sidebarCollapsed: false,
   settingsOpen: false,
+  aboutOpen: false,
   notifications: [],
   navigationItems: defaultNavigationItems,
   appInfo: null,
@@ -43,6 +46,7 @@ export const useAppStore = create<AppStore>((set, get) => ({
   setCurrentRoute: (route) => set({ currentRoute: route }),
   setSidebarCollapsed: (collapsed) => set({ sidebarCollapsed: collapsed }),
   setSettingsOpen: (open) => set({ settingsOpen: open }),
+  setAboutOpen: (open) => set({ aboutOpen: open }),
 
   // Navigation methods
   setNavigationItems: (items) => set({ navigationItems: items }),

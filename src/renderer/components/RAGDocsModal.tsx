@@ -689,11 +689,11 @@ When supporting administrative functions:
         </div>
 
         {/* Instructions */}
-        <div className="px-6 py-4 bg-blue-50 dark:bg-blue-900/20 border-b border-gray-200 dark:border-gray-700">
-          <p className="text-sm text-blue-800 dark:text-blue-200">
+        <div className="px-6 py-4 bg-gray-50 dark:bg-gray-900/40 border-b border-gray-200 dark:border-gray-700">
+          <p className="text-sm text-gray-700 dark:text-gray-300">
             The following documents are designed to be used as a knowledge base for a RAG (Retrieval-Augmented Generation) implementation of your chatbot.
           </p>
-          <ol className="text-xs text-blue-700 dark:text-blue-300 mt-2 ml-4 list-decimal">
+          <ol className="text-xs text-gray-600 dark:text-gray-400 mt-2 ml-4 list-decimal">
             <li>Save each document as a separate text or markdown file</li>
             <li>Process these documents with your chosen vector database or RAG framework</li>
             <li>Configure your chatbot to query this knowledge base when responding to users</li>
@@ -709,7 +709,7 @@ When supporting administrative functions:
               onClick={() => setActiveTab(index)}
               className={`px-3 py-3 text-sm font-medium border-b-2 transition-all duration-200 min-w-0 flex-shrink-0 ${
                 activeTab === index
-                  ? 'border-blue-500 text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
+                  ? 'border-primary-500 text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
                   : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'
               }`}
               title={doc.title} // Full title on hover
@@ -733,13 +733,13 @@ When supporting administrative functions:
           <div className="flex gap-3 mb-4">
             <button
               onClick={() => handleCopyDocument(documents[activeTab]?.content)}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
             >
               📋 Copy Document
             </button>
             <button
               onClick={() => handleDownloadDocument(documents[activeTab]?.title, documents[activeTab]?.content)}
-              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 transition-colors"
             >
               💾 Download Document
             </button>
@@ -750,7 +750,7 @@ When supporting administrative functions:
         <div className="p-6 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900">
           <button
             onClick={handleDownloadAll}
-            className="w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
+            className="w-full px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
           >
             📦 Download All Documents
           </button>
