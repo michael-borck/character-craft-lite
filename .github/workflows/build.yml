@@ -11,6 +11,7 @@ on:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         include:
           - os: macos-latest
@@ -66,7 +67,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_ID_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
+          # electron-builder (notarytool) reads APPLE_APP_SPECIFIC_PASSWORD
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
 
       - name: Upload artifacts
