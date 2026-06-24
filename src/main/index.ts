@@ -3,6 +3,7 @@ import { join } from 'path'
 import Store from 'electron-store'
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
+// eslint-disable-next-line @typescript-eslint/no-require-imports -- CommonJS-only startup check in the Electron main process
 if (require('electron-squirrel-startup')) {
   app.quit()
 }
